@@ -1,1 +1,1 @@
-export { decrease, increase } from "@redux/slices/counter";
+export {  } from "@redux/slices";

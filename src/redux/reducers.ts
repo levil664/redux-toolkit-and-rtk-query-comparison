@@ -1,11 +1,10 @@
-import { combineReducers } from "redux";
+import { combineReducers } from '@reduxjs/toolkit';
+import circlesServiceReducer from './slices';
 
-import counter from "@redux/slices/counter";
+const rootReducer = combineReducers({
+    circlesService: circlesServiceReducer
+});
 
-import { store } from "./store";
-
-const rootReducer = combineReducers({ counter });
-
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof rootReducer>;
 
 export default rootReducer;
